@@ -48,7 +48,7 @@ const Index = () => {
       title: "Топовое решение",
       subtitle: "Мощность будущего уже сегодня",
       description: "Для монтажа видео 4K, 3D-моделирования, разработки и самых сложных вычислений",
-      image: "/img/153dcf9b-0e4c-4718-89b2-6743546db5b1.jpg",
+      image: "/img/4738c31c-427e-4094-a0a8-5d67d6f3c677.jpg",
       variants: [
         { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB", price: "58 000₽" },
         { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060", price: "80 000₽" }
@@ -282,7 +282,7 @@ const Index = () => {
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
               <Icon name="MessageCircle" size={20} className="mr-2" />
-              Telegram/WhatsApp
+              +7(963)787-34-87
             </Button>
           </div>
         </div>
