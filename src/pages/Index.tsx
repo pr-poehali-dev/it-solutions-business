@@ -40,8 +40,8 @@ const Index = () => {
       description: "Решение для работы с графикой, монтажа видео и проектирования",
       image: "/img/52a6a0bb-fe17-4cab-ba32-c128ebd551c5.jpg",
       variants: [
-        { name: "Отличный старт", specs: "i5-10400, 16GB, SSD 500GB, RX580 8GB — 30 000₽", price: "" },
-        { name: "Профессиональная мощь", specs: "i7-10700, 16GB, SSD 500GB, RTX3060 8GB — 49 000₽", price: "" }
+        { name: "Отличный старт", specs: "i5-10400, 16GB, SSD 500GB, RX580 8GB", price: "30 000₽" },
+        { name: "Профессиональная мощь", specs: "i7-10700, 16GB, SSD 500GB, RTX3060 8GB", price: "49 000₽" }
       ]
     },
     {
@@ -50,8 +50,8 @@ const Index = () => {
       description: "Для монтажа видео 4K, 3D-моделирования, разработки и самых сложных вычислений",
       image: "/img/4738c31c-427e-4094-a0a8-5d67d6f3c677.jpg",
       variants: [
-        { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB — 58 000₽", price: "" },
-        { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060 — 80 000₽", price: "" }
+        { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB", price: "58 000₽" },
+        { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060", price: "80 000₽" }
       ]
     }
   ];
@@ -180,7 +180,7 @@ const Index = () => {
                           <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
                             <div className="flex justify-between items-start mb-4">
                               <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
-                              {variant.price && <span className="text-2xl font-bold text-blue-600">{variant.price}</span>}
+                              {variant.price && <span className="text-lg font-bold text-blue-600">{variant.price}</span>}
                             </div>
                             <p className="text-gray-600 mb-4">{variant.specs}</p>
                             <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
