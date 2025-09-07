@@ -209,7 +209,7 @@ const Index = () => {
                 <div className="grid lg:grid-cols-2 gap-8 mb-8">
                   <div>
                     <img 
-                      src="/img/ca1d803a-718a-4cec-a2e0-67daf2dce2d7.jpg" 
+                      src="/img/3cecd8cd-84c1-49f5-bd2c-19f83010ea06.jpg" 
                       alt="Мониторы" 
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
@@ -232,7 +232,7 @@ const Index = () => {
                   
                   <div>
                     <img 
-                      src="/img/eb5186f6-c972-4f5e-a3c0-5b2c01a34616.jpg" 
+                      src="/img/05139d14-7bfa-4091-8a75-4841d9fcdb3f.jpg" 
                       alt="Аксессуары" 
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
