@@ -20,8 +20,8 @@ const Index = () => {
       description: "Для: менеджеров, риелторов, операторов, руководителей отделов",
       image: "/img/5fcd5029-490f-45a5-8e40-8cf374015280.jpg",
       variants: [
-        { name: "Оптимальный", specs: "Core i3-6100, 16GB DDR4, SSD 500GB — 12 000₽", price: "" },
-        { name: "Максимальная скорость", specs: "Core i5-7500, 16GB, SSD 500GB — 14 500₽", price: "" }
+        { name: "Оптимальный", specs: "Core i3-6100, 16GB DDR4, SSD 500GB", price: "12 000₽" },
+        { name: "Максимальная скорость", specs: "Core i5-7500, 16GB, SSD 500GB", price: "14 500₽" }
       ]
     },
     {
@@ -30,8 +30,8 @@ const Index = () => {
       description: "Мощности для комфортной работы с 1С, клиент-банками и формированием сложной отчетности",
       image: "/img/2b7489d5-031b-4565-8678-d99bbe2a60bf.jpg",
       variants: [
-        { name: "Сбалансированный", specs: "Core i3-8100, 16GB DDR4, SSD 500GB — 14 000₽", price: "" },
-        { name: "Для сложных расчетов", specs: "Core i5-8500, 16GB, SSD 500GB — 17 500₽", price: "" }
+        { name: "Сбалансированный", specs: "Core i3-8100, 16GB DDR4, SSD 500GB", price: "14 000₽" },
+        { name: "Для сложных расчетов", specs: "Core i5-8500, 16GB, SSD 500GB", price: "17 500₽" }
       ]
     },
     {
@@ -88,9 +88,11 @@ const Index = () => {
               <a href="#guarantee" className="text-gray-700 hover:text-blue-600 transition-colors">Гарантия</a>
               <a href="#contacts" className="text-gray-700 hover:text-blue-600 transition-colors">Контакты</a>
             </nav>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              <Icon name="Phone" size={16} className="mr-2" />
-              +7(963)773-04-56
+            <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+              <a href="https://wa.me/79637730456" target="_blank" rel="noopener noreferrer">
+                <Icon name="Phone" size={16} className="mr-2" />
+                +7(963)773-04-56
+              </a>
             </Button>
           </div>
         </div>
@@ -176,8 +178,9 @@ const Index = () => {
                       <div className="grid gap-4">
                         {category.variants.map((variant, vIndex) => (
                           <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
-                            <div className="mb-4">
-                              <h4 className="text-xl font-semibold text-gray-900 mb-2">{variant.name}</h4>
+                            <div className="flex justify-between items-start mb-4">
+                              <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
+                              {variant.price && <span className="text-2xl font-bold text-blue-600">{variant.price}</span>}
                             </div>
                             <p className="text-gray-600 mb-4">{variant.specs}</p>
                             <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
@@ -223,8 +226,10 @@ const Index = () => {
                         <div key={index} className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
                           <div className="text-lg font-semibold text-gray-900 mb-1">{monitor.size}</div>
                           <div className="text-xl font-bold text-blue-600">{monitor.price}</div>
-                          <Button size="sm" className="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-xs">
-                            Заказать
+                          <Button size="sm" className="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-xs" asChild>
+                            <a href="https://wa.me/79637730456" target="_blank" rel="noopener noreferrer">
+                              Заказать
+                            </a>
                           </Button>
                         </div>
                       ))}
@@ -252,9 +257,11 @@ const Index = () => {
                             <div className="text-2xl font-bold text-blue-600">800₽</div>
                           </div>
                         </div>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                          <Icon name="ShoppingCart" size={16} className="mr-2" />
-                          Заказать комплект
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                          <a href="https://wa.me/79637730456" target="_blank" rel="noopener noreferrer">
+                            <Icon name="ShoppingCart" size={16} className="mr-2" />
+                            Заказать комплект
+                          </a>
                         </Button>
                       </div>
                       
@@ -268,9 +275,11 @@ const Index = () => {
                             <div className="text-2xl font-bold text-blue-600">1 400₽</div>
                           </div>
                         </div>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                          <Icon name="ShoppingCart" size={16} className="mr-2" />
-                          Заказать комплект
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                          <a href="https://wa.me/79637730456" target="_blank" rel="noopener noreferrer">
+                            <Icon name="ShoppingCart" size={16} className="mr-2" />
+                            Заказать комплект
+                          </a>
                         </Button>
                       </div>
                     </div>
