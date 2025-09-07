@@ -353,13 +353,13 @@ const Index = () => {
                 +7(963)773-04-56
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
               <a href="tel:+79637873487">
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 +7(963)787-34-87
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
               <a href="https://t.me/pc4officce" target="_blank" rel="noopener noreferrer">
                 <Icon name="Send" size={20} className="mr-2" />
                 Telegram канал
