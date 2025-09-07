@@ -196,32 +196,94 @@ const Index = () => {
           </div>
 
           {/* Monitors and Accessories */}
-          <Card className="mt-12 shadow-lg">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">Мониторы и аксессуары</h3>
-              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-                {monitors.map((monitor, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-4 text-center">
-                    <Icon name="Monitor" size={32} className="mx-auto mb-2 text-blue-600" />
-                    <p className="font-semibold text-gray-900">{monitor.size}</p>
-                    <p className="text-blue-600 font-bold">{monitor.price}</p>
-                  </div>
-                ))}
+          <Card className="mt-12 shadow-lg overflow-hidden">
+            <CardContent className="p-0">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 text-center">
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">Мониторы и аксессуары</h3>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Дополните свою рабочую станцию качественными мониторами и периферией
+                </p>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 rounded-lg p-4 flex justify-between items-center">
-                  <div className="flex items-center">
-                    <Icon name="Keyboard" size={24} className="text-blue-600 mr-3" />
-                    <span className="font-semibold">Клавиатура + мышь (проводные)</span>
+              
+              <div className="p-8">
+                <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <img 
+                      src="/img/ca1d803a-718a-4cec-a2e0-67daf2dce2d7.jpg" 
+                      alt="Мониторы" 
+                      className="w-full h-48 object-cover rounded-lg mb-4"
+                    />
+                    <h4 className="text-xl font-semibold mb-4 text-gray-900">
+                      <Icon name="Monitor" size={24} className="inline mr-2 text-blue-600" />
+                      Мониторы БУ без дефектов
+                    </h4>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      {monitors.map((monitor, index) => (
+                        <div key={index} className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                          <div className="text-lg font-semibold text-gray-900 mb-1">{monitor.size}</div>
+                          <div className="text-xl font-bold text-blue-600">{monitor.price}</div>
+                          <Button size="sm" className="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-xs">
+                            Заказать
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <span className="font-bold text-blue-600">800₽</span>
+                  
+                  <div>
+                    <img 
+                      src="/img/eb5186f6-c972-4f5e-a3c0-5b2c01a34616.jpg" 
+                      alt="Аксессуары" 
+                      className="w-full h-48 object-cover rounded-lg mb-4"
+                    />
+                    <h4 className="text-xl font-semibold mb-4 text-gray-900">
+                      <Icon name="Keyboard" size={24} className="inline mr-2 text-blue-600" />
+                      Клавиатуры и мыши
+                    </h4>
+                    <div className="space-y-4">
+                      <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div className="flex justify-between items-center mb-3">
+                          <div>
+                            <h5 className="font-semibold text-gray-900">Комплект проводной</h5>
+                            <p className="text-sm text-gray-600">Клавиатура + мышь новые</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-blue-600">800₽</div>
+                          </div>
+                        </div>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                          <Icon name="ShoppingCart" size={16} className="mr-2" />
+                          Заказать комплект
+                        </Button>
+                      </div>
+                      
+                      <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div className="flex justify-between items-center mb-3">
+                          <div>
+                            <h5 className="font-semibold text-gray-900">Комплект беспроводной</h5>
+                            <p className="text-sm text-gray-600">Клавиатура + мышь новые</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-blue-600">1 400₽</div>
+                          </div>
+                        </div>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                          <Icon name="ShoppingCart" size={16} className="mr-2" />
+                          Заказать комплект
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-4 flex justify-between items-center">
-                  <div className="flex items-center">
-                    <Icon name="Mouse" size={24} className="text-blue-600 mr-3" />
-                    <span className="font-semibold">Клавиатура + мышь (беспроводные)</span>
-                  </div>
-                  <span className="font-bold text-blue-600">1 400₽</span>
+                
+                <div className="bg-blue-50 rounded-lg p-6 text-center">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    <Icon name="Truck" size={20} className="inline mr-2 text-blue-600" />
+                    Быстрая доставка и установка
+                  </h4>
+                  <p className="text-gray-600">
+                    Подключим и настроим все оборудование. Готовое рабочее место за один день!
+                  </p>
                 </div>
               </div>
             </CardContent>
