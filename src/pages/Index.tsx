@@ -80,7 +80,7 @@ const Index = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               <Icon name="Monitor" size={32} className="text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900">IT-Solutions</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Office - PC</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#catalog" className="text-gray-700 hover:text-blue-600 transition-colors">Каталог</a>
@@ -178,11 +178,10 @@ const Index = () => {
                       <div className="grid gap-4">
                         {category.variants.map((variant, vIndex) => (
                           <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
-                            <div className="flex justify-between items-start mb-4">
-                              <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
-                              {variant.price && <span className="text-lg font-bold text-blue-600">{variant.price}</span>}
+                            <div className="mb-4">
+                              <h4 className="text-xl font-semibold text-gray-900 mb-2">{variant.name}</h4>
                             </div>
-                            <p className="text-gray-600 mb-4">{variant.specs}</p>
+                            <p className="text-gray-600 mb-4">{variant.specs} {variant.price && `— ${variant.price}`}</p>
                             <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
                               <a href="https://wa.me/79637730456" target="_blank" rel="noopener noreferrer">
                                 <Icon name="ShoppingCart" size={16} className="mr-2" />
@@ -272,7 +271,7 @@ const Index = () => {
                             <p className="text-sm text-gray-600">Клавиатура + мышь новые</p>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-blue-600">1 400₽</div>
+                            <div className="text-lg font-bold text-blue-600">1 400₽</div>
                           </div>
                         </div>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
