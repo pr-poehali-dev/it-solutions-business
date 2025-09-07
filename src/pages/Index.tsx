@@ -346,6 +346,12 @@ const Index = () => {
               <Icon name="MessageCircle" size={20} className="mr-2" />
               +7(963)787-34-87
             </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+              <a href="https://t.me/pc4officce" target="_blank" rel="noopener noreferrer">
+                <Icon name="Send" size={20} className="mr-2" />
+                Telegram канал
+              </a>
+            </Button>
           </div>
         </div>
       </section>
