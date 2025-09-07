@@ -1,12 +1,322 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const computerCategories = [
+    {
+      title: "Для офиса и склада",
+      subtitle: "Стабильная работа для базовых задач",
+      description: "Идеально для: 1С, офисные приложения, почта, работа с документами, складские программы",
+      variants: [
+        { name: "Экономичный", specs: "Core i3-6100, 8GB DDR4, SSD 240GB", price: "9 000₽" },
+        { name: "С запасом мощности", specs: "Core i5-6500, 8GB, SSD 240GB", price: "11 000₽" }
+      ]
+    },
+    {
+      title: "Для многозадачности",
+      subtitle: "Ни одного зависания при работе с десятками вкладок",
+      description: "Для: менеджеров, риелторов, операторов, руководителей отделов",
+      variants: [
+        { name: "Оптимальный", specs: "Core i3-6100, 16GB DDR4, SSD 500GB", price: "12 000₽" },
+        { name: "Максимальная скорость", specs: "Core i5-7500, 16GB, SSD 500GB", price: "14 500₽" }
+      ]
+    },
+    {
+      title: "Для бухгалтерии",
+      subtitle: "Скорость и надежность для главного бухгалтера",
+      description: "Мощности для комфортной работы с 1С, клиент-банками и формированием сложной отчетности",
+      variants: [
+        { name: "Сбалансированный", specs: "Core i3-8100, 16GB DDR4, SSD 500GB", price: "14 000₽" },
+        { name: "Для сложных расчетов", specs: "Core i5-8500, 16GB, SSD 500GB", price: "17 500₽" }
+      ]
+    },
+    {
+      title: "Для дизайнеров",
+      subtitle: "Творчество и проектирование без ограничений",
+      description: "Решение для работы с графикой, монтажа видео и проектирования",
+      variants: [
+        { name: "Отличный старт", specs: "i5-10400, 16GB, SSD 500GB, RX580 8GB", price: "30 000₽" },
+        { name: "Профессиональная мощь", specs: "i7-10700, 16GB, SSD 500GB, RTX3060 8GB", price: "49 000₽" }
+      ]
+    },
+    {
+      title: "Топовое решение",
+      subtitle: "Мощность будущего уже сегодня",
+      description: "Для монтажа видео 4K, 3D-моделирования, разработки и самых сложных вычислений",
+      variants: [
+        { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB", price: "58 000₽" },
+        { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060", price: "80 000₽" }
+      ]
+    }
+  ];
+
+  const monitors = [
+    { size: '22" IPS', price: "4 000₽" },
+    { size: '23" IPS', price: "5 000₽" },
+    { size: '24" TN', price: "5 000₽" },
+    { size: '24" IPS', price: "6 500₽" },
+    { size: '27" IPS', price: "8 500₽" },
+    { size: '32" IPS', price: "14 000₽" }
+  ];
+
+  const advantages = [
+    { icon: "Target", title: "Решение под задачу", desc: "Подберем конфигурацию именно для ваших потребностей" },
+    { icon: "DollarSign", title: "Экономия до 50%", desc: "Получите мощные рабочие станции по цене офисных ПК" },
+    { icon: "CheckCircle", title: "Безупречное состояние", desc: "Корпуса 4/5, техника 5/5. Вы не отличите от новой" },
+    { icon: "Package", title: "Готовность к работе", desc: "Установлена ОС и базовое ПО. Подключил и работай" }
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-2">
+              <Icon name="Monitor" size={32} className="text-blue-600" />
+              <h1 className="text-2xl font-bold text-gray-900">IT-Solutions</h1>
+            </div>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#catalog" className="text-gray-700 hover:text-blue-600 transition-colors">Каталог</a>
+              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Услуги</a>
+              <a href="#guarantee" className="text-gray-700 hover:text-blue-600 transition-colors">Гарантия</a>
+              <a href="#contacts" className="text-gray-700 hover:text-blue-600 transition-colors">Контакты</a>
+            </nav>
+            <Button className="bg-blue-600 hover:bg-blue-700">
+              <Icon name="Phone" size={16} className="mr-2" />
+              Связаться
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="absolute inset-0">
+          <img 
+            src="/img/f6feea81-6fc2-4b66-8d7d-b2d28cdeace3.jpg" 
+            alt="Офис с сотрудниками" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+              ИТ-решения для вашего бизнеса
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Высокая производительность и надежность. Оптимальная стоимость.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+                <Icon name="ShoppingCart" size={20} className="mr-2" />
+                Выбрать компьютер
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+                <Icon name="Calculator" size={20} className="mr-2" />
+                Рассчитать стоимость
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Почему выбирают нас?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon name={advantage.icon as any} size={32} className="text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{advantage.title}</h3>
+                  <p className="text-gray-600">{advantage.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Catalog Section */}
+      <section id="catalog" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+            Каталог решений
+          </h2>
+          <div className="space-y-12">
+            {computerCategories.map((category, index) => (
+              <Card key={index} className="overflow-hidden shadow-lg">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{category.title}</h3>
+                    <p className="text-lg text-blue-600 mb-4">{category.subtitle}</p>
+                    <p className="text-gray-600">{category.description}</p>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {category.variants.map((variant, vIndex) => (
+                      <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
+                        <div className="flex justify-between items-start mb-4">
+                          <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
+                          <span className="text-2xl font-bold text-blue-600">{variant.price}</span>
+                        </div>
+                        <p className="text-gray-600 mb-4">{variant.specs}</p>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                          <Icon name="ShoppingCart" size={16} className="mr-2" />
+                          Заказать
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Monitors and Accessories */}
+          <Card className="mt-12 shadow-lg">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">Мониторы и аксессуары</h3>
+              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                {monitors.map((monitor, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-4 text-center">
+                    <Icon name="Monitor" size={32} className="mx-auto mb-2 text-blue-600" />
+                    <p className="font-semibold text-gray-900">{monitor.size}</p>
+                    <p className="text-blue-600 font-bold">{monitor.price}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 rounded-lg p-4 flex justify-between items-center">
+                  <div className="flex items-center">
+                    <Icon name="Keyboard" size={24} className="text-blue-600 mr-3" />
+                    <span className="font-semibold">Клавиатура + мышь (проводные)</span>
+                  </div>
+                  <span className="font-bold text-blue-600">800₽</span>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4 flex justify-between items-center">
+                  <div className="flex items-center">
+                    <Icon name="Mouse" size={24} className="text-blue-600 mr-3" />
+                    <span className="font-semibold">Клавиатура + мышь (беспроводные)</span>
+                  </div>
+                  <span className="font-bold text-blue-600">1 400₽</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Что вы получаете?</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center border-0 shadow-md">
+              <CardContent className="p-6">
+                <Icon name="Settings" size={48} className="mx-auto mb-4 text-blue-600" />
+                <h3 className="text-xl font-semibold mb-2">Подбор под задачу</h3>
+                <p className="text-gray-600">Экономьте только на цене, а не на качестве работы</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center border-0 shadow-md">
+              <CardContent className="p-6">
+                <Icon name="Shield" size={48} className="mx-auto mb-4 text-blue-600" />
+                <h3 className="text-xl font-semibold mb-2">Гарантия 6 месяцев</h3>
+                <p className="text-gray-600">Полное гарантийное обслуживание</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center border-0 shadow-md">
+              <CardContent className="p-6">
+                <Icon name="CheckCircle2" size={48} className="mx-auto mb-4 text-blue-600" />
+                <h3 className="text-xl font-semibold mb-2">Тест и установка</h3>
+                <p className="text-gray-600">Полная диагностика и установка необходимого ПО</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center border-0 shadow-md">
+              <CardContent className="p-6">
+                <Icon name="Star" size={48} className="mx-auto mb-4 text-blue-600" />
+                <h3 className="text-xl font-semibold mb-2">Внешний вид</h3>
+                <p className="text-gray-600">Аккуратные корпуса, которые впишутся в любой интерьер</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">
+            Готовы повысить эффективность вашей команды?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Свяжитесь с нами для консультации и подбора идеального решения!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Icon name="Phone" size={20} className="mr-2" />
+              +7 (XXX) XXX-XX-XX
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Icon name="MessageCircle" size={20} className="mr-2" />
+              Telegram/WhatsApp
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="contacts" className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <Icon name="Monitor" size={24} className="text-blue-400" />
+                <span className="text-xl font-bold">IT-Solutions</span>
+              </div>
+              <p className="text-gray-400">
+                Надежная техника с идеальным соотношением цены и качества
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Каталог</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Офисные решения</li>
+                <li>Для многозадачности</li>
+                <li>Бухгалтерские ПК</li>
+                <li>Дизайнерские станции</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Услуги</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Подбор конфигурации</li>
+                <li>Установка ПО</li>
+                <li>Гарантийное обслуживание</li>
+                <li>Техническая поддержка</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Контакты</h4>
+              <div className="space-y-2 text-gray-400">
+                <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                <p>Email: info@it-solutions.ru</p>
+                <p>Адрес: г. Москва</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 IT-Solutions. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
