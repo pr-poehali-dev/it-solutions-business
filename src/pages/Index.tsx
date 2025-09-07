@@ -20,8 +20,8 @@ const Index = () => {
       description: "Для: менеджеров, риелторов, операторов, руководителей отделов",
       image: "/img/5fcd5029-490f-45a5-8e40-8cf374015280.jpg",
       variants: [
-        { name: "Оптимальный", specs: "Core i3-6100, 16GB DDR4, SSD 500GB", price: "12 000₽" },
-        { name: "Максимальная скорость", specs: "Core i5-7500, 16GB, SSD 500GB", price: "14 500₽" }
+        { name: "Оптимальный", specs: "Core i3-6100, 16GB DDR4, SSD 500GB — 12 000₽", price: "" },
+        { name: "Максимальная скорость", specs: "Core i5-7500, 16GB, SSD 500GB — 14 500₽", price: "" }
       ]
     },
     {
@@ -30,8 +30,8 @@ const Index = () => {
       description: "Мощности для комфортной работы с 1С, клиент-банками и формированием сложной отчетности",
       image: "/img/2b7489d5-031b-4565-8678-d99bbe2a60bf.jpg",
       variants: [
-        { name: "Сбалансированный", specs: "Core i3-8100, 16GB DDR4, SSD 500GB", price: "14 000₽" },
-        { name: "Для сложных расчетов", specs: "Core i5-8500, 16GB, SSD 500GB", price: "17 500₽" }
+        { name: "Сбалансированный", specs: "Core i3-8100, 16GB DDR4, SSD 500GB — 14 000₽", price: "" },
+        { name: "Для сложных расчетов", specs: "Core i5-8500, 16GB, SSD 500GB — 17 500₽", price: "" }
       ]
     },
     {
@@ -40,8 +40,8 @@ const Index = () => {
       description: "Решение для работы с графикой, монтажа видео и проектирования",
       image: "/img/52a6a0bb-fe17-4cab-ba32-c128ebd551c5.jpg",
       variants: [
-        { name: "Отличный старт", specs: "i5-10400, 16GB, SSD 500GB, RX580 8GB", price: "30 000₽" },
-        { name: "Профессиональная мощь", specs: "i7-10700, 16GB, SSD 500GB, RTX3060 8GB", price: "49 000₽" }
+        { name: "Отличный старт", specs: "i5-10400, 16GB, SSD 500GB, RX580 8GB — 30 000₽", price: "" },
+        { name: "Профессиональная мощь", specs: "i7-10700, 16GB, SSD 500GB, RTX3060 8GB — 49 000₽", price: "" }
       ]
     },
     {
@@ -50,8 +50,8 @@ const Index = () => {
       description: "Для монтажа видео 4K, 3D-моделирования, разработки и самых сложных вычислений",
       image: "/img/4738c31c-427e-4094-a0a8-5d67d6f3c677.jpg",
       variants: [
-        { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB", price: "58 000₽" },
-        { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060", price: "80 000₽" }
+        { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB — 58 000₽", price: "" },
+        { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060 — 80 000₽", price: "" }
       ]
     }
   ];
@@ -176,14 +176,15 @@ const Index = () => {
                       <div className="grid gap-4">
                         {category.variants.map((variant, vIndex) => (
                           <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
-                            <div className="flex justify-between items-start mb-4">
-                              <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
-                              <span className="text-2xl font-bold text-blue-600">{variant.price}</span>
+                            <div className="mb-4">
+                              <h4 className="text-xl font-semibold text-gray-900 mb-2">{variant.name}</h4>
                             </div>
                             <p className="text-gray-600 mb-4">{variant.specs}</p>
-                            <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                              <Icon name="ShoppingCart" size={16} className="mr-2" />
-                              Заказать
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                              <a href="https://wa.me/79637730456" target="_blank" rel="noopener noreferrer">
+                                <Icon name="ShoppingCart" size={16} className="mr-2" />
+                                Заказать
+                              </a>
                             </Button>
                           </div>
                         ))}
@@ -338,13 +339,17 @@ const Index = () => {
             Свяжитесь с нами для консультации и подбора идеального решения!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Icon name="Phone" size={20} className="mr-2" />
-              +7(963)773-04-56
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
+              <a href="tel:+79637730456">
+                <Icon name="Phone" size={20} className="mr-2" />
+                +7(963)773-04-56
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Icon name="MessageCircle" size={20} className="mr-2" />
-              +7(963)787-34-87
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+              <a href="tel:+79637873487">
+                <Icon name="MessageCircle" size={20} className="mr-2" />
+                +7(963)787-34-87
+              </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
               <a href="https://t.me/pc4officce" target="_blank" rel="noopener noreferrer">
