@@ -346,7 +346,7 @@ const Index = () => {
           <p className="text-xl mb-8 text-blue-100">
             Свяжитесь с нами для консультации и подбора идеального решения!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100" asChild>
               <a href="tel:+79637730456">
                 <Icon name="Phone" size={20} className="mr-2" />
