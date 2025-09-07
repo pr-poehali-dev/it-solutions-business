@@ -8,6 +8,7 @@ const Index = () => {
       title: "Для офиса и склада",
       subtitle: "Стабильная работа для базовых задач",
       description: "Идеально для: 1С, офисные приложения, почта, работа с документами, складские программы",
+      image: "/img/1f802152-c869-4499-b481-3b48a25a7fba.jpg",
       variants: [
         { name: "Экономичный", specs: "Core i3-6100, 8GB DDR4, SSD 240GB", price: "9 000₽" },
         { name: "С запасом мощности", specs: "Core i5-6500, 8GB, SSD 240GB", price: "11 000₽" }
@@ -17,6 +18,7 @@ const Index = () => {
       title: "Для многозадачности",
       subtitle: "Ни одного зависания при работе с десятками вкладок",
       description: "Для: менеджеров, риелторов, операторов, руководителей отделов",
+      image: "/img/5fcd5029-490f-45a5-8e40-8cf374015280.jpg",
       variants: [
         { name: "Оптимальный", specs: "Core i3-6100, 16GB DDR4, SSD 500GB", price: "12 000₽" },
         { name: "Максимальная скорость", specs: "Core i5-7500, 16GB, SSD 500GB", price: "14 500₽" }
@@ -26,6 +28,7 @@ const Index = () => {
       title: "Для бухгалтерии",
       subtitle: "Скорость и надежность для главного бухгалтера",
       description: "Мощности для комфортной работы с 1С, клиент-банками и формированием сложной отчетности",
+      image: "/img/2b7489d5-031b-4565-8678-d99bbe2a60bf.jpg",
       variants: [
         { name: "Сбалансированный", specs: "Core i3-8100, 16GB DDR4, SSD 500GB", price: "14 000₽" },
         { name: "Для сложных расчетов", specs: "Core i5-8500, 16GB, SSD 500GB", price: "17 500₽" }
@@ -35,6 +38,7 @@ const Index = () => {
       title: "Для дизайнеров",
       subtitle: "Творчество и проектирование без ограничений",
       description: "Решение для работы с графикой, монтажа видео и проектирования",
+      image: "/img/52a6a0bb-fe17-4cab-ba32-c128ebd551c5.jpg",
       variants: [
         { name: "Отличный старт", specs: "i5-10400, 16GB, SSD 500GB, RX580 8GB", price: "30 000₽" },
         { name: "Профессиональная мощь", specs: "i7-10700, 16GB, SSD 500GB, RTX3060 8GB", price: "49 000₽" }
@@ -44,6 +48,7 @@ const Index = () => {
       title: "Топовое решение",
       subtitle: "Мощность будущего уже сегодня",
       description: "Для монтажа видео 4K, 3D-моделирования, разработки и самых сложных вычислений",
+      image: "/img/1e0f1896-3956-43f5-afd8-eab1604f134e.jpg",
       variants: [
         { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB", price: "58 000₽" },
         { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060", price: "80 000₽" }
@@ -153,26 +158,37 @@ const Index = () => {
           <div className="space-y-12">
             {computerCategories.map((category, index) => (
               <Card key={index} className="overflow-hidden shadow-lg">
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{category.title}</h3>
-                    <p className="text-lg text-blue-600 mb-4">{category.subtitle}</p>
-                    <p className="text-gray-600">{category.description}</p>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {category.variants.map((variant, vIndex) => (
-                      <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
-                        <div className="flex justify-between items-start mb-4">
-                          <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
-                          <span className="text-2xl font-bold text-blue-600">{variant.price}</span>
-                        </div>
-                        <p className="text-gray-600 mb-4">{variant.specs}</p>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                          <Icon name="ShoppingCart" size={16} className="mr-2" />
-                          Заказать
-                        </Button>
+                <CardContent className="p-0">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    <div className="relative">
+                      <img 
+                        src={category.image} 
+                        alt={category.title} 
+                        className="w-full h-64 lg:h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-8">
+                      <div className="mb-6">
+                        <h3 className="text-2xl font-bold mb-2 text-gray-900">{category.title}</h3>
+                        <p className="text-lg text-blue-600 mb-4">{category.subtitle}</p>
+                        <p className="text-gray-600">{category.description}</p>
                       </div>
-                    ))}
+                      <div className="grid gap-4">
+                        {category.variants.map((variant, vIndex) => (
+                          <div key={vIndex} className="bg-gray-50 rounded-lg p-6">
+                            <div className="flex justify-between items-start mb-4">
+                              <h4 className="text-xl font-semibold text-gray-900">{variant.name}</h4>
+                              <span className="text-2xl font-bold text-blue-600">{variant.price}</span>
+                            </div>
+                            <p className="text-gray-600 mb-4">{variant.specs}</p>
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                              <Icon name="ShoppingCart" size={16} className="mr-2" />
+                              Заказать
+                            </Button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
