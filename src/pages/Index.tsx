@@ -8,7 +8,7 @@ const Index = () => {
       title: "Для офиса и склада",
       subtitle: "Стабильная работа для базовых задач",
       description: "Идеально для: 1С, офисные приложения, почта, работа с документами, складские программы",
-      image: "/img/1f802152-c869-4499-b481-3b48a25a7fba.jpg",
+      image: "/img/5b8ded2f-e28f-4846-9d62-5f7d6438385a.jpg",
       variants: [
         { name: "Экономичный", specs: "Core i3-6100, 8GB DDR4, SSD 240GB", price: "9 000₽" },
         { name: "С запасом мощности", specs: "Core i5-6500, 8GB, SSD 240GB", price: "11 000₽" }
@@ -48,7 +48,7 @@ const Index = () => {
       title: "Топовое решение",
       subtitle: "Мощность будущего уже сегодня",
       description: "Для монтажа видео 4K, 3D-моделирования, разработки и самых сложных вычислений",
-      image: "/img/1e0f1896-3956-43f5-afd8-eab1604f134e.jpg",
+      image: "/img/153dcf9b-0e4c-4718-89b2-6743546db5b1.jpg",
       variants: [
         { name: "Топ", specs: "i5-12400, 32GB, SSD 1TB, RTX4060 8GB", price: "58 000₽" },
         { name: "Флагман", specs: "Ryzen 7-5700X3D, 32GB, SSD 1TB, RTX5060", price: "80 000₽" }
@@ -323,7 +323,7 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Контакты</h4>
               <div className="space-y-2 text-gray-400">
                 <p>Телефон: +7(963)773-04-56</p>
-                <p>Email: info@it-solutions.ru</p>
+                <p>Email: miitgidro@mail.ru</p>
                 <p>Адрес: Москва, Угловой переулок 2</p>
               </div>
             </div>
