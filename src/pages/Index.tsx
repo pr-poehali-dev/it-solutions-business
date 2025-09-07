@@ -85,7 +85,7 @@ const Index = () => {
             </nav>
             <Button className="bg-blue-600 hover:bg-blue-700">
               <Icon name="Phone" size={16} className="mr-2" />
-              Связаться
+              +7(963)773-04-56
             </Button>
           </div>
         </div>
@@ -262,7 +262,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               <Icon name="Phone" size={20} className="mr-2" />
-              +7 (XXX) XXX-XX-XX
+              +7(963)773-04-56
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
               <Icon name="MessageCircle" size={20} className="mr-2" />
@@ -306,9 +306,9 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <div className="space-y-2 text-gray-400">
-                <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                <p>Телефон: +7(963)773-04-56</p>
                 <p>Email: info@it-solutions.ru</p>
-                <p>Адрес: г. Москва</p>
+                <p>Адрес: Москва, Угловой переулок 2</p>
               </div>
             </div>
           </div>
